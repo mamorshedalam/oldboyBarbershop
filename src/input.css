@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "rex";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/assets/font/Rex_Bold.otf) format("otf");
+  }
+  @font-face {
+    font-family: "rex-inline";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/assets/font/Rex_Bold_Inline.otf) format("otf");
+  }
+  @font-face {
+    font-family: "Open-sans";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/assets/font/OpenSans-Light.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: "Open-sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/assets/font/OpenSans-Regular.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: "Open-sans";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(/assets/font/OpenSans-Semibold.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: "Open-sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/assets/font/OpenSans-Bold.ttf) format("ttf");
+  }
+}
