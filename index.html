@@ -21,11 +21,11 @@
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body>
+<body :class="sidebar ? 'fixed top-0':''" x-data="{sidebar: false}">
      <header class="x-header">
           <div class="x-header-top">
                <div class="x-header-logo"><img src="assets/img/logo.svg" alt="Oldboy Barbershop Main Page"></div>
-               <nav class="x-header-nav">
+               <nav :class="sidebar?'right-0':'lg:right-auto -right-full'" class="x-header-nav x-animation-md">
                     <ul class="x-header-menu">
                          <li class="lg:m-0 m-5"><a href="" class="hover:text-[#d6a354] x-animation-md">Main</a></li>
                          <li class="lg:m-0 m-5"><a href="" class="hover:text-[#d6a354] x-animation-md">Services</a></li>
@@ -49,6 +49,9 @@
                          </div>
                     </button>
                </div>
+               <button @click="sidebar = !sidebar" class="x-nav-toggle x-toggle-btn" :class="sidebar ? 'x-toggle-close':''">
+                    <span></span>
+               </button>
           </div>
           <div class="x-header-bottom">
                <div class="flex flex-col lg:w-fit w-full">
@@ -66,14 +69,12 @@
                     <div class="x-header-link">
                          <a href="" class="bg-[#d6a354] x-header-link-btn">Online
                               appointment</a>
-                         <a href=""
-                              class="bg-[rgba(19, 19, 19, .5)] x-header-link-btn">About
+                         <a href="" class="bg-[rgba(19, 19, 19, .5)] x-header-link-btn">About
                               Barbershop</a>
                     </div>
                </div>
                <div class="x-header-banner">
-                    <div
-                         class="x-header-banner-inner">
+                    <div class="x-header-banner-inner">
                          <div class="mb-5 text-right">
                               <h2 class="text-[#d6a354]">Install a special <br>
                                    <strong class="text-white text-2xl leading-none">mobile <br> application</strong>
@@ -99,6 +100,14 @@
                </div>
           </div>
      </header>
+     <main class="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolor totam deserunt est at voluptatibus incidunt, maiores consectetur illum neque asperiores hic nisi tempora eius quod?
+          Voluptate aut est vitae.
+     </main>
+     <footer class="">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, voluptate. Dolor ad deleniti rem, culpa exercitationem cum eos voluptatem in, accusantium mollitia vel non, excepturi magni
+          soluta ducimus laborum nostrum!
+     </footer>
 </body>
 
 </html>

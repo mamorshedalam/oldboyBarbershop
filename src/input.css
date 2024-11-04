@@ -11,13 +11,13 @@
     @apply relative flex justify-between md:mt-2.5 mt-1.5 mb-5;
   }
   .x-header-logo {
-    @apply xs:block hidden md:w-[190px] w-[85px];
+    @apply xs:block hidden md:w-[120px] w-[85px];
   }
   .x-header-nav {
-    @apply lg:relative fixed inset-0 lg:visible lg:opacity-100 invisible opacity-0 lg:flex-grow lg:w-0 w-full lg:max-w-full max-w-[400px] 2xl:text-xl lg:text-sm text-2xl z-20;
+    @apply lg:relative fixed top-0 bottom-0 lg:visible lg:opacity-100 lg:flex-grow lg:w-0 w-full lg:max-w-full max-w-[400px] 2xl:text-xl lg:text-sm text-2xl lg:bg-transparent bg-[#131313]/90 z-[99];
   }
   .x-header-menu {
-    @apply lg:relative absolute inset-0 flex lg:flex-row flex-col items-center lg:justify-start lg:bg-transparent bg-[#131313] 2xl:pl-10 lg:pl-2.5 xl:gap-5 lg:gap-2.5 gap-5;
+    @apply flex lg:flex-row flex-col lg:items-start items-center lg:justify-start justify-center h-full 2xl:pl-10 lg:pl-2.5 xl:gap-5 lg:gap-2.5 gap-5;
   }
   .x-header-right {
     @apply md:pl-20 pr-16 flex gap-3;
@@ -27,6 +27,9 @@
   }
   .x-lang-dropdown {
     @apply absolute top-0 md:right-0 md:left-auto left-0 py-8 px-10 overflow-hidden bg-[#896322] rounded-2xl;
+  }
+  .x-nav-toggle {
+    @apply lg:hidden block fixed md:top-11 md:right-8 top-5 right-5 h-12 w-12 bg-[rgba(19,19,19,.5)] border-2 border-[#d6a354] rounded-full duration-300 ease-out z-[999];
   }
   /* BOTTOM HEADER */
   .x-header-bottom {
@@ -121,7 +124,7 @@
   }
   /* CUSTOM CSS */
   body {
-    @apply max-w-[1920px] mx-auto overflow-hidden;
+    @apply max-w-[1920px] mx-auto;
   }
 
   section,
@@ -173,6 +176,47 @@
     background-repeat: repeat-x;
     background-position: top 2px center;
     background-size: 800px;
+  }
+  .x-toggle-btn::before {
+    top: 14px;
+    content: "";
+  }
+  .x-toggle-btn::after {
+    top: 28px;
+    content: "";
+  }
+  .x-toggle-btn>span,
+  .x-toggle-btn::before,
+  .x-toggle-btn::after {
+    position: absolute;
+    left: 11px;
+    width: 22px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transform-origin: center left;
+    transition: all 0.3s ease-out;
+  }
+  .x-toggle-btn>span{
+    top: 21px;
+  }
+  .x-toggle-close>span{
+    opacity: 0;
+    width: 0;
+  }
+  .x-toggle-close::before {
+    top: 13px;
+    left: 14px;
+    width: 23px;
+    transform: rotate(45deg);
+    transform-origin: left center;
+  }
+  .x-toggle-close::after {
+    top: 29px;
+    left: 14px;
+    width: 23px;
+    transform: rotate(-45deg);
+    transform-origin: left center;
   }
   @media (min-width: 700px) {
     .x-hero {
