@@ -4,7 +4,7 @@
 
 @layer components {
   .x-header {
-    @apply relative flex flex-col justify-between 2xl:min-h-[900px] xl:min-h-[740px] lg:min-h-[700px] lg:h-dvh md:min-h-[640px] min-h-[520px] 2xl:px-20 2xl:py-14 xl:p-14 xl:pb-20 lg:pb-14 md:p-10 md:pb-16 p-5 pb-16 bg-no-repeat font-rex uppercase text-white bg-cover x-hero;
+    @apply relative flex flex-col justify-between 2xl:min-h-[900px] xl:min-h-[740px] lg:min-h-[700px] md:min-h-[640px] min-h-[520px] 2xl:px-20 2xl:py-14 xl:p-14 xl:pb-20 lg:pb-14 md:p-10 md:pb-16 p-5 pb-16 bg-no-repeat font-rex uppercase text-white bg-cover x-hero;
   }
   /* TOP HEADER */
   .x-header-top {
@@ -36,32 +36,32 @@
     @apply flex justify-between items-stretch flex-wrap pt-5;
   }
   .x-header-hero {
-    @apply w-56 mb-auto -skew-y-[15deg];
+    @apply 2xl:w-[305px] w-[184px] mb-auto -skew-y-[15deg];
   }
   .x-header-heading {
-    @apply font-bold text-7xl;
+    @apply font-bold 2xl:text-6xl text-3xl;
   }
   .x-header-sub {
-    @apply relative text-xl leading-5 text-[#d6a354] after:absolute after:right-0 after:bottom-1 after:w-1/2 after:h-1 after:bg-[#d6a354];
+    @apply relative 2xl:text-2xl 2xl:leading-6 text-base leading-5 text-[#d6a354] after:absolute after:right-0 after:bottom-1 after:w-1/2 after:h-1 after:bg-[#d6a354];
   }
   .x-header-count {
-    @apply relative flex items-center gap-2.5 py-2.5 after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-[#d6a354];
+    @apply relative flex items-center gap-2.5 2xl:mt-2.5 2xl:p-0 py-2.5 after:absolute 2xl:after:hidden after:block after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-[#d6a354];
   }
   .x-header-ending {
-    @apply w-56 mt-2.5 font-bold leading-4;
+    @apply w-[215px] font-bold 2xl:text-lg text-base 2xl:leading-5 leading-4;
   }
   .x-header-link {
-    @apply w-56 lg:mx-0 mx-auto md:pt-32 pt-44 font-sans font-semibold;
+    @apply w-[220px] md:pt-[130px] pt-[180px] self-center lg:text-left text-center font-sans font-semibold;
   }
   .x-header-link-btn {
-    @apply min-w-44 px-5 mb-5 text-xs leading-[36px] border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313];
+    @apply 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 mb-5 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313];
   }
   /* HEADER BANNER */
   .x-header-banner {
-    @apply lg:block hidden w-[500px] pl-10 h-fit mt-auto;
+    @apply absolute 2xl:bottom-5 lg:bottom-1.5 right-0 lg:block hidden 2xl:py-5 2xl:px-20 xl:py-8 xl:px-12 lg:py-5 lg:px-10 md:p-5 py-3 px-5 2xl:w-[600px] xl:w-[500px] lg:w-1/2 pl-10 h-fit mt-auto;
   }
   .x-header-banner-inner {
-    @apply relative xl:py-8 py-5 xl:px-12 px-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-[rgba(214,163,84,0)] after:to-[rgba(214,163,84,.75)];
+    @apply relative xl:mb-8 mb-5 xl:py-8 py-5 xl:px-12 px-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-[rgba(214,163,84,0)] after:to-[rgba(214,163,84,.75)];
   }
   .x-header-banner-app {
     @apply flex flex-col basis-auto font-sans font-semibold text-sm leading-10 text-center capitalize;
@@ -70,7 +70,7 @@
     @apply w-48 flex items-center justify-center gap-2 ml-auto my-2.5 border-2 border-white rounded-full hover:bg-white hover:text-[#131313] x-animation-md;
   }
   .x-header-banner-img {
-    @apply absolute left-0 xl:-bottom-12 -bottom-5 xl:h-80 h-72 z-10;
+    @apply absolute left-0 xl:-bottom-12 -bottom-8 xl:h-80 h-72 z-10;
   }
   /* ANIMATION */
   .x-animation-md {
