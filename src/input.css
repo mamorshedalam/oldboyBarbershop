@@ -3,75 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  .x-header {
-    @apply relative flex flex-col justify-between 2xl:min-h-[900px] xl:min-h-[740px] lg:min-h-[700px] md:min-h-[640px] min-h-[520px] 2xl:px-20 2xl:py-14 xl:p-14 xl:pb-20 lg:pb-14 md:p-10 md:pb-16 p-5 pb-16 bg-no-repeat font-rex uppercase text-white bg-cover x-hero;
-  }
-  /* TOP HEADER */
-  .x-header-top {
-    @apply relative flex justify-between md:mt-2.5 mt-1.5 mb-5;
-  }
-  .x-header-logo {
-    @apply xs:block hidden md:w-[120px] w-[85px];
-  }
-  .x-header-nav {
-    @apply lg:relative fixed top-0 bottom-0 lg:visible lg:opacity-100 lg:flex-grow lg:w-0 w-full lg:max-w-full max-w-[400px] 2xl:text-xl lg:text-sm text-2xl lg:bg-transparent bg-[#131313]/90 z-[99];
-  }
-  .x-header-menu {
-    @apply flex lg:flex-row flex-col lg:items-start items-center lg:justify-start justify-center h-full 2xl:pl-10 lg:pl-2.5 xl:gap-5 lg:gap-2.5 gap-5;
-  }
-  .x-header-right {
-    @apply md:pl-20 pr-16 flex gap-3;
-  }
-  .x-lang-toggle {
-    @apply relative flex items-center justify-center h-8 w-8 rounded-full border-2 border-[#d6a354] group-hover:bg-[#d6a354] x-animation-md z-20;
-  }
-  .x-lang-dropdown {
-    @apply absolute top-0 md:right-0 md:left-auto left-0 py-8 px-10 overflow-hidden bg-[#896322] rounded-2xl;
-  }
-  .x-nav-toggle {
-    @apply lg:hidden block fixed md:top-11 md:right-8 top-5 right-5 h-12 w-12 bg-[rgba(19,19,19,.5)] border-2 border-[#d6a354] rounded-full duration-300 ease-out z-[999];
-  }
-  /* BOTTOM HEADER */
-  .x-header-bottom {
-    @apply flex justify-between items-stretch flex-wrap pt-5;
-  }
-  .x-header-hero {
-    @apply 2xl:w-[305px] w-[184px] mb-auto -skew-y-[15deg];
-  }
-  .x-header-heading {
-    @apply font-bold 2xl:text-6xl text-3xl;
-  }
-  .x-header-sub {
-    @apply relative 2xl:text-2xl 2xl:leading-6 text-base leading-5 text-[#d6a354] after:absolute after:right-0 after:bottom-1 after:w-1/2 after:h-1 after:bg-[#d6a354];
-  }
-  .x-header-count {
-    @apply relative flex items-center gap-2.5 2xl:mt-2.5 2xl:p-0 py-2.5 after:absolute 2xl:after:hidden after:block after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-[#d6a354];
-  }
-  .x-header-ending {
-    @apply w-[215px] font-bold 2xl:text-lg text-base 2xl:leading-5 leading-4;
-  }
-  .x-header-link {
-    @apply w-[220px] md:pt-[130px] pt-[180px] self-center lg:text-left text-center font-sans font-semibold;
-  }
-  .x-header-link-btn {
-    @apply 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 mb-5 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313];
-  }
-  /* HEADER BANNER */
-  .x-header-banner {
-    @apply absolute 2xl:bottom-5 lg:bottom-1.5 right-0 lg:block hidden 2xl:py-5 2xl:px-20 xl:py-8 xl:px-12 lg:py-5 lg:px-10 md:p-5 py-3 px-5 2xl:w-[600px] xl:w-[500px] lg:w-1/2 pl-10 h-fit mt-auto;
-  }
-  .x-header-banner-inner {
-    @apply relative xl:mb-8 mb-5 xl:py-8 py-5 xl:px-12 px-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-[rgba(214,163,84,0)] after:to-[rgba(214,163,84,.75)];
-  }
-  .x-header-banner-app {
-    @apply flex flex-col basis-auto font-sans font-semibold text-sm leading-10 text-center capitalize;
-  }
-  .x-header-banner-link {
-    @apply w-48 flex items-center justify-center gap-2 ml-auto my-2.5 border-2 border-white rounded-full hover:bg-white hover:text-[#131313] x-animation-md;
-  }
-  .x-header-banner-img {
-    @apply absolute left-0 xl:-bottom-12 -bottom-8 xl:h-80 h-72 z-10;
-  }
   /* ANIMATION */
   .x-animation-md {
     @apply transition-all duration-300 ease-out;
@@ -160,7 +91,7 @@
   body::-webkit-scrollbar-track {
     background: 0 0;
   }
-  .x-hero {
+  .x-hero-bg {
     background-image: url(/assets/img/bg/hero-bg-mobile.jpg);
     background-position: bottom center;
   }
@@ -185,7 +116,7 @@
     top: 28px;
     content: "";
   }
-  .x-toggle-btn>span,
+  .x-toggle-btn > span,
   .x-toggle-btn::before,
   .x-toggle-btn::after {
     position: absolute;
@@ -197,10 +128,10 @@
     transform-origin: center left;
     transition: all 0.3s ease-out;
   }
-  .x-toggle-btn>span{
+  .x-toggle-btn > span {
     top: 21px;
   }
-  .x-toggle-close>span{
+  .x-toggle-close > span {
     opacity: 0;
     width: 0;
   }
@@ -218,13 +149,46 @@
     transform: rotate(-45deg);
     transform-origin: left center;
   }
+  .x-bg-about-title::after{
+    position: absolute;
+  top: 0;
+  right: -20px;
+  width: 40px;
+  height: 100%;
+  background-image: url(/assets/img/gold-v-grunge.svg);
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: cover;
+  content: "";
+  }
+  .x-bg-about-img::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background-image: url(/assets/img/white-grunge-90.svg);
+    background-repeat: no-repeat;
+    background-position: center left 20px;
+    background-size: 150px;
+    content: "";
+  }
   @media (min-width: 700px) {
-    .x-hero {
+    .x-hero-bg {
       background-image: url(/assets/img/bg/hero-t.jpg);
+    }
+    .x-about-bg {
+      background-image: url(/assets/img/bg/price-bottom-d.jpg);
+    }
+    .x-text-shadow-1 {
+      text-shadow: -4px 3px 0 #896322;
+    }
+    .x-text-shadow-2 {
+      text-shadow: 0 0 20px #896322;
     }
   }
   @media (min-width: 1000px) {
-    .x-hero {
+    .x-hero-bg {
       background-image: url(/assets/img/bg/hero.jpg);
       background-position: bottom center;
     }

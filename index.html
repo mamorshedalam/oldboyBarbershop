@@ -22,20 +22,23 @@
 </head>
 
 <body :class="sidebar ? 'fixed top-0':''" x-data="{sidebar: false}">
-     <header class="x-header">
-          <div class="x-header-top">
-               <div class="x-header-logo"><img src="assets/img/logo.svg" alt="Oldboy Barbershop Main Page"></div>
-               <nav :class="sidebar?'right-0':'lg:right-auto -right-full'" class="x-header-nav x-animation-md">
-                    <ul class="x-header-menu">
+     <header
+          class="relative flex flex-col justify-between 2xl:min-h-[900px] xl:min-h-[740px] lg:min-h-[700px] md:min-h-[640px] min-h-[520px] 2xl:px-20 2xl:py-14 xl:p-14 xl:pb-20 lg:pb-14 md:p-10 md:pb-16 p-5 pb-16 bg-no-repeat font-rex uppercase text-white bg-cover x-hero-bg">
+          <div class="relative flex justify-between md:mt-2.5 mt-1.5 mb-5">
+               <div class="xs:block hidden md:w-[120px] w-[85px]"><img src="assets/img/logo.svg" alt="Oldboy Barbershop Main Page"></div>
+               <nav :class="sidebar?'right-0':'lg:right-auto -right-full'"
+                    class="lg:relative fixed top-0 bottom-0 lg:visible lg:opacity-100 lg:flex-grow lg:w-0 w-full lg:max-w-full max-w-[400px] 2xl:text-xl lg:text-sm text-2xl lg:bg-transparent bg-[#131313]/90 z-[99] x-animation-md">
+                    <ul class="flex lg:flex-row flex-col lg:items-start items-center lg:justify-start justify-center h-full 2xl:pl-10 lg:pl-2.5 xl:gap-5 lg:gap-2.5 gap-5">
                          <li class="lg:m-0 m-5"><a href="" class="hover:text-[#d6a354] x-animation-md">Main</a></li>
                          <li class="lg:m-0 m-5"><a href="" class="hover:text-[#d6a354] x-animation-md">Services</a></li>
                          <li class="lg:m-0 m-5"><a href="" class="hover:text-[#d6a354] x-animation-md">Franchise</a></li>
                     </ul>
                </nav>
-               <div class="x-header-right">
+               <div class="md:pl-20 pr-16 flex gap-3">
                     <div class="relative group" x-data="{active: false}">
-                         <button @click="active = !active" class="x-lang-toggle">EN</button>
-                         <ul x-cloak x-show="active" class="x-lang-dropdown">
+                         <button @click="active = !active"
+                              class="relative flex items-center justify-center h-8 w-8 rounded-full border-2 border-[#d6a354] group-hover:bg-[#d6a354] x-animation-md z-20">EN</button>
+                         <ul x-cloak x-show="active" class="absolute top-0 md:right-0 md:left-auto left-0 py-8 px-10 overflow-hidden bg-[#896322] rounded-2xl">
                               <li><a href="" class="py-1 hover:text-[#131313]">English</a></li>
                               <li><a href="" class="py-1 hover:text-[#131313]">Polski</a></li>
                               <li><a href="" class="py-1 hover:text-[#131313]">Georgian</a></li>
@@ -49,17 +52,21 @@
                          </div>
                     </button>
                </div>
-               <button @click="sidebar = !sidebar" class="x-nav-toggle x-toggle-btn" :class="sidebar ? 'x-toggle-close':''">
+               <button @click="sidebar = !sidebar"
+                    class="lg:hidden block fixed md:top-11 md:right-8 top-5 right-5 h-12 w-12 bg-[rgba(19,19,19,.5)] border-2 border-[#d6a354] rounded-full x-animation-md z-[999] x-toggle-btn"
+                    :class="sidebar ? 'x-toggle-close':''">
                     <span></span>
                </button>
           </div>
-          <div class="x-header-bottom">
+          <div class="flex justify-between items-stretch flex-wrap pt-5">
                <div class="flex flex-col lg:w-fit w-full">
-                    <div class="x-header-hero">
-                         <h1 class="x-header-heading">Oldboy <br>Barbershop</h1>
-                         <p class="x-header-sub">The Largest Barbershop <br>Network
+                    <div class="2xl:w-[305px] w-[184px] mb-auto -skew-y-[15deg]">
+                         <h1 class="font-bold 2xl:text-6xl text-3xl">Oldboy <br>Barbershop</h1>
+                         <p class="relative 2xl:text-2xl 2xl:leading-6 text-base leading-5 text-[#d6a354] after:absolute after:right-0 after:bottom-1 after:w-1/2 after:h-1 after:bg-[#d6a354]">The
+                              Largest Barbershop <br>Network
                          </p>
-                         <div class="x-header-count">
+                         <div
+                              class="relative flex items-center gap-2.5 2xl:mt-2.5 2xl:p-0 py-2.5 after:absolute 2xl:after:hidden after:block after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-[#d6a354]">
                               <p class="font-rex-inline 2xl:text-[200px] text-7xl">298</p>
                               <p class="2xl:hidden block w-20 text-base font-bold leading-4">open branches</p>
                          </div>
@@ -67,51 +74,93 @@
                               class="2xl:relative 2xl:bottom-0 2xl:w-auto 2xl:text-right 2xl:block hidden after:absolute 2xl:after:block after:hidden after:bottom-2 after:left-0 after:w-1/2 after:h-1 after:bg-[#d6a354]">
                               open branches</p>
                          <div class="flex 2xl:flex-row 2xl:justify-between flex-col mt-2.5">
-                              <p class="x-header-ending">More than just a men's hairdresser</p>
+                              <p class="w-[215px] font-bold 2xl:text-lg text-base 2xl:leading-5 leading-4">More than just a men's hairdresser</p>
                               <img src="assets/img/razor.svg" alt="" class="w-16 skew-y-[15deg]">
                          </div>
                     </div>
-                    <div class="x-header-link">
-                         <a href="" class="bg-[#d6a354] x-header-link-btn">Online
+                    <div class="w-[220px] md:pt-[130px] pt-[180px] self-center lg:text-left text-center font-sans font-semibold">
+                         <a href=""
+                              class="bg-[#d6a354] 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 mb-5 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313]">Online
                               appointment</a>
-                         <a href="" class="bg-[rgba(19, 19, 19, .5)] x-header-link-btn">About
+                         <a href=""
+                              class="bg-[rgba(19, 19, 19, .5)] 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 mb-5 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313]">About
                               Barbershop</a>
                     </div>
                </div>
-               <div class="x-header-banner">
-                    <div class="x-header-banner-inner">
+               <div
+                    class="absolute 2xl:bottom-5 lg:bottom-1.5 right-0 lg:block hidden 2xl:py-5 2xl:px-20 xl:py-8 xl:px-12 lg:py-5 lg:px-10 md:p-5 py-3 px-5 2xl:w-[600px] xl:w-[500px] lg:w-1/2 pl-10 h-fit mt-auto">
+                    <div
+                         class="relative xl:mb-8 mb-5 xl:py-8 py-5 xl:px-12 px-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-[rgba(214,163,84,0)] after:to-[rgba(214,163,84,.75)]">
                          <div class="mb-5 text-right">
                               <h2 class="text-[#d6a354]">Install a special <br>
                                    <strong class="text-white text-2xl leading-none">mobile <br> application</strong>
                               </h2>
                               <p>for online appointments</p>
                          </div>
-                         <div class="x-header-banner-app">
-                              <a href="" class="x-header-banner-link">
+                         <div class="flex flex-col basis-auto font-sans font-semibold text-sm leading-10 text-center capitalize">
+                              <a href="" class="w-48 flex items-center justify-center gap-2 ml-auto my-2.5 border-2 border-white rounded-full hover:bg-white hover:text-[#131313] x-animation-md">
                                    <svg class="fill-current w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <path
                                              d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
                                    </svg>
                                    Google Play</a>
-                              <a href="" class="x-header-banner-link">
+                              <a href="" class="w-48 flex items-center justify-center gap-2 ml-auto my-2.5 border-2 border-white rounded-full hover:bg-white hover:text-[#131313] x-animation-md">
                                    <svg class="fill-current w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                         <path
                                              d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
                                    </svg>
                                    APP STORE</a>
                          </div>
-                         <img class="x-header-banner-img" src="assets/img/mobile-app.png" alt="">
+                         <img class="absolute left-0 xl:-bottom-12 -bottom-8 xl:h-80 h-72 z-10" src="assets/img/mobile-app.png" alt="">
                     </div>
                </div>
           </div>
      </header>
-     <main class="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolor totam deserunt est at voluptatibus incidunt, maiores consectetur illum neque asperiores hic nisi tempora eius quod?
-          Voluptate aut est vitae.
+     <main>
+          <section class="flex flex-wrap lg:flex-row flex-col w-full 2xl:mt-[120px] lg:mt-[100px] mt-[70px] 2xl:pr-[50px] xl:mt-[100px] bg-no-repeat x-about-bg">
+               <div class="2xl:w-[500px] md:w-[360px] md:max-w-max max-w-[325px] w-11/12 py-5 mb-8 skew-y-[-15deg] font-rex text-white">
+                    <h2 class="relative md:py-5 md:px-10 p-5 mb-2.5 md:text-5xl text-4xl shadow-md shadow-black/25 x-text-shadow-1 bg-[#d6a354] x-bg-about-title">
+                         About our<br>Barbershop
+                    </h2>
+                    <p class="relative flex items-center w-full md:pr-5 md:text-4xl text-3xl x-text-shadow-2 z-10"><span class="w-1/2 h-1 mr-3 bg-[#896322]"></span><span>Oldboy Barbershop</span></p>
+                    <div class="relative 2xl:h-[400px] h-[300px] w-[calc(100%+40px)] -mt-[50px] overflow-hidden x-bg-about-img z-0">
+                         <img src="assets/img/bg/about.jpg" alt="">
+                    </div>
+               </div>
+               <div class="lg:flex-grow lg:w-0 w-full lg:pl-20 md:px-10 px-5">
+                    <div class="md:py-5">
+                         <h3 class="md:text-4xl text-[#131313] text-2xl font-rex">Oldboy — Barbershop with your personality</h3>
+                         <p class="xl:text-base text-sm md:mt-5 mt-3 md:mb-0 mb-3 text-[#896322] font-semibold leading-loose uppercase tracking-wider">We have everything what a real man needs:
+                              atmosphere of masculinity, a spirit of good fellowship, professionalism of barbers and keeping European barbering traditions, as well as fine coffee and pleasant company
+                         </p>
+                    </div>
+                    <div class="py-5 md:mt-0 -mt-4">
+                         <p class="2xl:text-xl text-base text-[#131313] md:mt-5 mt-3 md:mb-0 mb-3 ">Oldboy Barbershop is more than just a men's hairdresser. This is the place where we help you to find your own unique identity.
+                              You should trust Olboy professionals once, and believe me, your new identity won't remain you indifferent. Men's haircuts and straight razor shaving are our prior
+                              specialization and we are sure that our barbers do best. As well-known Ralph Lauren once said: 'It doesn't matter which lifestyle you choose, but you must have your own
+                              style, your own world'. Of course, we can't make you another Cary Grant, but you can be sure of three things:</p>
+                         <div class="lg:py-8 pt-4 md:flex">
+                              <div class="md:w-1/3 w-full flex md:flex-col md:justify-start justify-around items-center mb-10">
+                                   <div class="w-20"><img src="assets/img/icon/whiskey.svg" alt=""></div>
+                                   <h4 class="xl:text-sm lg:text-xs text-sm md:text-center leading-loose tracking-wider uppercase md:p-5 pl-5 basis-[calc(100%-100px)] text-[#896322] font-semibold ">You
+                                        will always be offered a cup of coffee or a glass of soda</h4>
+                              </div>
+                              <div class="md:w-1/3 w-full flex md:flex-col md:justify-start justify-around items-center mb-10">
+                                   <div class="w-20"><img src="assets/img/icon/medal.svg" alt=""></div>
+                                   <h4 class="xl:text-sm lg:text-xs text-sm md:text-center leading-loose tracking-wider uppercase md:p-5 pl-5 basis-[calc(100%-100px)] text-[#896322] font-semibold ">We will cut and shave you at the highest level keeping to the all european traditions</h4>
+                              </div>
+                              <div class="md:w-1/3 w-full flex md:flex-col md:justify-start justify-around items-center mb-10">
+                                   <div class="w-20"><img src="assets/img/icon/best-friend.svg" alt=""></div>
+                                   <h4 class="xl:text-sm lg:text-xs text-sm md:text-center leading-loose tracking-wider uppercase md:p-5 pl-5 basis-[calc(100%-100px)] text-[#896322] font-semibold ">You will want to visit our barbershop again before you know it</h4>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </section>
      </main>
      <footer class="">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, voluptate. Dolor ad deleniti rem, culpa exercitationem cum eos voluptatem in, accusantium mollitia vel non, excepturi magni
-          soluta ducimus laborum nostrum!
+          
      </footer>
 </body>
 
