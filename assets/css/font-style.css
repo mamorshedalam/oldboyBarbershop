@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Rex Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/Rex_Bold.otf) format("otf");
+}
+@font-face {
+  font-family: "rex-inline";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/font/Rex_Bold_Inline.otf) format("otf");
+}
+@font-face {
+  font-family: "Open-sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(/assets/font/OpenSans-Light.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Open-sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/font/OpenSans-Regular.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Open-sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(/assets/font/OpenSans-Semibold.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Open-sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/font/OpenSans-Bold.ttf) format("ttf");
+}
+
+body {
+  font-family: "Rex Bold";
+}

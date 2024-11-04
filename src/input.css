@@ -2,47 +2,187 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .x-header {
+    @apply relative flex flex-col justify-between 2xl:min-h-[900px] xl:min-h-[740px] lg:min-h-[700px] lg:h-dvh md:min-h-[640px] min-h-[520px] 2xl:px-20 2xl:py-14 xl:p-14 xl:pb-20 lg:pb-14 md:p-10 md:pb-16 p-5 pb-16 bg-no-repeat font-rex uppercase text-white bg-cover x-hero;
+  }
+  /* TOP HEADER */
+  .x-header-top {
+    @apply relative flex justify-between md:mt-2.5 mt-1.5 mb-5;
+  }
+  .x-header-logo {
+    @apply xs:block hidden md:w-[190px] w-[85px];
+  }
+  .x-header-nav {
+    @apply lg:relative fixed inset-0 lg:visible lg:opacity-100 invisible opacity-0 lg:flex-grow lg:w-0 w-full lg:max-w-full max-w-[400px] 2xl:text-xl lg:text-sm text-2xl z-20;
+  }
+  .x-header-menu {
+    @apply lg:relative absolute inset-0 flex lg:flex-row flex-col items-center lg:justify-start lg:bg-transparent bg-[#131313] 2xl:pl-10 lg:pl-2.5 xl:gap-5 lg:gap-2.5 gap-5;
+  }
+  .x-header-right {
+    @apply md:pl-20 pr-16 flex gap-3;
+  }
+  .x-lang-toggle {
+    @apply relative flex items-center justify-center h-8 w-8 rounded-full border-2 border-[#d6a354] group-hover:bg-[#d6a354] x-animation-md z-20;
+  }
+  .x-lang-dropdown {
+    @apply absolute top-0 md:right-0 md:left-auto left-0 py-8 px-10 overflow-hidden bg-[#896322] rounded-2xl;
+  }
+  /* BOTTOM HEADER */
+  .x-header-bottom {
+    @apply flex justify-between items-stretch flex-wrap pt-5;
+  }
+  .x-header-hero {
+    @apply w-56 mb-auto -skew-y-[15deg];
+  }
+  .x-header-heading {
+    @apply font-bold text-7xl;
+  }
+  .x-header-sub {
+    @apply relative text-xl leading-5 text-[#d6a354] after:absolute after:right-0 after:bottom-1 after:w-1/2 after:h-1 after:bg-[#d6a354];
+  }
+  .x-header-count {
+    @apply relative flex items-center gap-2.5 py-2.5 after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-[#d6a354];
+  }
+  .x-header-ending {
+    @apply w-56 mt-2.5 font-bold leading-4;
+  }
+  .x-header-link {
+    @apply w-56 lg:mx-0 mx-auto md:pt-32 pt-44 font-sans font-semibold;
+  }
+  .x-header-link-btn {
+    @apply min-w-44 px-5 mb-5 text-xs leading-[36px] border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313];
+  }
+  /* HEADER BANNER */
+  .x-header-banner {
+    @apply lg:block hidden w-[500px] pl-10 h-fit mt-auto;
+  }
+  .x-header-banner-inner {
+    @apply relative xl:py-8 py-5 xl:px-12 px-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-[rgba(214,163,84,0)] after:to-[rgba(214,163,84,.75)];
+  }
+  .x-header-banner-app {
+    @apply flex flex-col basis-auto font-sans font-semibold text-sm leading-10 text-center capitalize;
+  }
+  .x-header-banner-link {
+    @apply w-48 flex items-center justify-center gap-2 ml-auto my-2.5 border-2 border-white rounded-full hover:bg-white hover:text-[#131313] x-animation-md;
+  }
+  .x-header-banner-img {
+    @apply absolute left-0 xl:-bottom-12 -bottom-5 xl:h-80 h-72 z-10;
+  }
+  /* ANIMATION */
+  .x-animation-md {
+    @apply transition-all duration-300 ease-out;
+  }
+}
+
 @layer base {
+  /* OFFLINE FONT FAMILY */
   @font-face {
     font-family: "rex";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(/assets/font/Rex_Bold.otf) format("otf");
+    src: url(/assets/font/Rex_Bold.woff) format("woff");
   }
   @font-face {
     font-family: "rex-inline";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(/assets/font/Rex_Bold_Inline.otf) format("otf");
+    src: url(/assets/font/Rex_Bold_Inline.woff) format("woff");
   }
   @font-face {
     font-family: "Open-sans";
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(/assets/font/OpenSans-Light.ttf) format("ttf");
+    src: url(/assets/font/OpenSans-Light.woff) format("woff");
   }
   @font-face {
     font-family: "Open-sans";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/assets/font/OpenSans-Regular.ttf) format("ttf");
+    src: url(/assets/font/OpenSans-Regular.woff) format("woff");
   }
   @font-face {
     font-family: "Open-sans";
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url(/assets/font/OpenSans-Semibold.ttf) format("ttf");
+    src: url(/assets/font/OpenSans-Semibold.woff) format("woff");
   }
   @font-face {
     font-family: "Open-sans";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(/assets/font/OpenSans-Bold.ttf) format("ttf");
+    src: url(/assets/font/OpenSans-Bold.woff) format("woff");
+  }
+  /* CUSTOM CSS */
+  body {
+    @apply max-w-[1920px] mx-auto overflow-hidden;
+  }
+
+  section,
+  header,
+  footer {
+    @apply relative;
+  }
+
+  a,
+  button {
+    @apply inline-block cursor-pointer;
+  }
+
+  img {
+    @apply w-fit align-middle;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply outline-none bg-transparent focus:outline-none;
+  }
+}
+
+@layer utilities {
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+  body::-webkit-slider-thumb {
+    background: #d6a354;
+    border-radius: 10px;
+  }
+  body::-webkit-scrollbar-track {
+    background: 0 0;
+  }
+  .x-hero {
+    background-image: url(/assets/img/bg/hero-bg-mobile.jpg);
+    background-position: bottom center;
+  }
+  .x-hero::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    content: "";
+    bottom: -40px;
+    z-index: 7;
+    height: 80px;
+    background-image: url(/assets/img/white-grunge.svg);
+    background-repeat: repeat-x;
+    background-position: top 2px center;
+    background-size: 800px;
+  }
+  @media (min-width: 700px) {
+    .x-hero {
+      background-image: url(/assets/img/bg/hero-t.jpg);
+    }
+  }
+  @media (min-width: 1000px) {
+    .x-hero {
+      background-image: url(/assets/img/bg/hero.jpg);
+      background-position: bottom center;
+    }
   }
 }
