@@ -678,6 +678,14 @@ input:focus,
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 .fixed {
   position: fixed;
 }
@@ -722,6 +730,14 @@ input:focus,
   top: 1.25rem;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.left-5 {
+  left: 1.25rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -754,6 +770,16 @@ input:focus,
 .my-2\.5 {
   margin-top: 0.625rem;
   margin-bottom: 0.625rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-\[30\] {
+  margin-top: 30;
+  margin-bottom: 30;
 }
 
 .-mt-4 {
@@ -812,12 +838,36 @@ input:focus,
   margin-top: 0.75rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-\[70px\] {
   margin-top: 70px;
 }
 
 .mt-auto {
   margin-top: auto;
+}
+
+.-mt-\[100px\] {
+  margin-top: -100px;
+}
+
+.-mt-\[120px\] {
+  margin-top: -120px;
+}
+
+.-mt-\[200px\] {
+  margin-top: -200px;
+}
+
+.-mt-\[240px\] {
+  margin-top: -240px;
+}
+
+.mt-\[30px\] {
+  margin-top: 30px;
 }
 
 .block {
@@ -933,6 +983,14 @@ input:focus,
   width: 100%;
 }
 
+.w-3 {
+  width: 0.75rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
 .min-w-\[200px\] {
   min-width: 200px;
 }
@@ -943,6 +1001,10 @@ input:focus,
 
 .max-w-\[400px\] {
   max-width: 400px;
+}
+
+.basis-1\/4 {
+  flex-basis: 25%;
 }
 
 .basis-\[calc\(100\%-100px\)\] {
@@ -968,6 +1030,10 @@ input:focus,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -976,12 +1042,24 @@ input:focus,
   flex-wrap: wrap;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
 
 .items-stretch {
   align-items: stretch;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1024,6 +1102,10 @@ input:focus,
   overflow: hidden;
 }
 
+.text-nowrap {
+  text-wrap: nowrap;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1040,6 +1122,11 @@ input:focus,
   border-width: 2px;
 }
 
+.border-y-2 {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
 .border-\[\#d6a354\] {
   --tw-border-opacity: 1;
   border-color: rgb(214 163 84 / var(--tw-border-opacity));
@@ -1048,6 +1135,10 @@ input:focus,
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-\[\] {
+  border-color: ;
 }
 
 .bg-\[\#131313\]\/90 {
@@ -1072,6 +1163,10 @@ input:focus,
   background-color: transparent;
 }
 
+.bg-\[\#13131380\] {
+  background-color: #13131380;
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1094,6 +1189,10 @@ input:focus,
 
 .p-\[5vw\] {
   padding: 5vw;
+}
+
+.p-1\.5 {
+  padding: 0.375rem;
 }
 
 .px-1 {
@@ -1141,8 +1240,16 @@ input:focus,
   padding-bottom: 2rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-16 {
   padding-bottom: 4rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .pb-5 {
@@ -1165,6 +1272,10 @@ input:focus,
   padding-right: 1.25rem;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1175,6 +1286,10 @@ input:focus,
 
 .pt-\[180px\] {
   padding-top: 180px;
+}
+
+.pt-\[60px\] {
+  padding-top: 60px;
 }
 
 .text-left {
@@ -1259,6 +1374,21 @@ input:focus,
   line-height: 1.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1317,6 +1447,11 @@ input:focus,
   color: rgb(137 99 34 / var(--tw-text-opacity));
 }
 
+.text-\[\#aeaeae\] {
+  --tw-text-opacity: 1;
+  color: rgb(174 174 174 / var(--tw-text-opacity));
+}
+
 .text-\[\#d6a354\] {
   --tw-text-opacity: 1;
   color: rgb(214 163 84 / var(--tw-text-opacity));
@@ -1327,8 +1462,20 @@ input:focus,
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[\] {
+  color: ;
+}
+
 .opacity-50 {
   opacity: 0.5;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
 }
 
 .shadow-md {
@@ -1341,6 +1488,8 @@ input:focus,
   --tw-shadow-color: rgba(19,19,19,.25);
   --tw-shadow: var(--tw-shadow-colored);
 }
+
+/* SCROLL */
 
 body::-webkit-scrollbar {
   width: 8px;
@@ -1355,10 +1504,66 @@ body::-webkit-scrollbar-track {
   background: 0 0;
 }
 
+/* CUSTOM BACKGROUND IMAGE */
+
 .x-hero-bg {
   background-image: url(/assets/img/bg/hero-bg-mobile.jpg);
   background-position: bottom center;
 }
+
+.x-footer-bg {
+  background-color: #131313;
+  background-image: url(/assets/img/white-grunge-180.svg);
+  background-repeat: no-repeat;
+  background-position: top -170px center;
+  background-size: 800px;
+}
+
+.x-bg-cross {
+  background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      #fff 10px,
+      #fff 20px
+    );
+}
+
+.x-service-bg {
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: bottom 40px right 160px;
+}
+
+/* IMAGE OVERLAY */
+
+.x-section-title::after {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 40px;
+  height: 100%;
+  background-image: url(/assets/img/gold-v-grunge.svg);
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: cover;
+  content: "";
+}
+
+.x-bg-about-img::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background-image: url(/assets/img/white-grunge-90.svg);
+  background-repeat: no-repeat;
+  background-position: center left 20px;
+  background-size: 150px;
+  content: "";
+}
+
+/* CUSTOM NAV MENU TOGGLE */
 
 .x-toggle-btn::before {
   top: 14px;
@@ -1408,53 +1613,15 @@ body::-webkit-scrollbar-track {
   transform-origin: left center;
 }
 
-.x-section-title::after {
-  position: absolute;
-  top: 0;
-  right: -20px;
-  width: 40px;
-  height: 100%;
-  background-image: url(/assets/img/gold-v-grunge.svg);
-  background-repeat: repeat-y;
-  background-position: center center;
-  background-size: cover;
-  content: "";
-}
-
-.x-bg-about-img::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 100%;
-  background-image: url(/assets/img/white-grunge-90.svg);
-  background-repeat: no-repeat;
-  background-position: center left 20px;
-  background-size: 150px;
-  content: "";
-}
+/* TEXT SHADOW */
 
 .x-text-shadow-1 {
   text-shadow: -3px 2px 0 #896322;
 }
 
-.x-bg-cross {
-  background-image: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 10px,
-      #fff 10px,
-      #fff 20px
-    );
-}
-
-.x-service-bg{
-  background-size: 100px;
-  background-repeat: no-repeat;
-  background-position: bottom 40px right 160px;
-}
-
 @media (min-width: 700px) {
+  /* CUSTOM BACKGROUND IMAGE */
+
   .x-hero-bg {
     background-image: url(/assets/img/bg/hero-t.jpg);
   }
@@ -1465,6 +1632,21 @@ body::-webkit-scrollbar-track {
     background-size: 1000px;
   }
 
+  .x-footer-bg {
+    background-image: url(/assets/img/white-grunge-180.svg),
+        url(/assets/img/bg/barberpull.jpg);
+    background-repeat: repeat-x, no-repeat;
+    background-position: top -170px center, center center;
+    background-size: 799px, cover;
+  }
+
+  .x-service-bg {
+    background-size: 120px;
+    background-position: center right;
+  }
+
+  /* TEXT SHADOW */
+
   .x-text-shadow-1 {
     text-shadow: -4px 3px 0 #896322;
   }
@@ -1472,14 +1654,11 @@ body::-webkit-scrollbar-track {
   .x-text-shadow-2 {
     text-shadow: 0 0 20px #896322;
   }
-
-  .x-service-bg{
-    background-size: 120px;
-    background-position: center right;
-  }
 }
 
 @media (min-width: 1000px) {
+  /* CUSTOM BACKGROUND IMAGE */
+
   .x-hero-bg {
     background-image: url(/assets/img/bg/hero.jpg);
     background-position: bottom center;
@@ -1489,23 +1668,27 @@ body::-webkit-scrollbar-track {
     background-size: 900px;
   }
 
-  .x-service-bg{
+  .x-service-bg {
     background-size: 80px;
     background-position: center right 10px;
   }
 }
 
 @media (min-width: 1200px) {
+  /* CUSTOM BACKGROUND IMAGE */
+
   .x-about-bg {
     background-size: 1200px;
   }
 
-  .x-service-bg{
+  .x-service-bg {
     background-size: 100px;
   }
 }
 
 @media (min-width: 1500px) {
+  /* CUSTOM BACKGROUND IMAGE */
+
   .x-about-bg {
     background-size: 1400px;
   }
@@ -1675,6 +1858,10 @@ body::-webkit-scrollbar-track {
     margin-top: 1.25rem;
   }
 
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1693,6 +1880,10 @@ body::-webkit-scrollbar-track {
 
   .md\:w-3\/5 {
     width: 60%;
+  }
+
+  .md\:w-80 {
+    width: 20rem;
   }
 
   .md\:w-9 {
@@ -1720,6 +1911,10 @@ body::-webkit-scrollbar-track {
     max-width: max-content;
   }
 
+  .md\:basis-1\/4 {
+    flex-basis: 25%;
+  }
+
   .md\:basis-\[45\%\] {
     flex-basis: 45%;
   }
@@ -1740,6 +1935,10 @@ body::-webkit-scrollbar-track {
     justify-content: flex-start;
   }
 
+  .md\:p-0 {
+    padding: 0px;
+  }
+
   .md\:p-10 {
     padding: 2.5rem;
   }
@@ -1751,6 +1950,16 @@ body::-webkit-scrollbar-track {
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .md\:py-5 {
@@ -1766,20 +1975,40 @@ body::-webkit-scrollbar-track {
     padding-bottom: 4rem;
   }
 
+  .md\:pb-\[30px\] {
+    padding-bottom: 30px;
+  }
+
   .md\:pl-20 {
     padding-left: 5rem;
+  }
+
+  .md\:pr-2\.5 {
+    padding-right: 0.625rem;
   }
 
   .md\:pr-5 {
     padding-right: 1.25rem;
   }
 
+  .md\:pt-20 {
+    padding-top: 5rem;
+  }
+
   .md\:pt-\[130px\] {
     padding-top: 130px;
   }
 
+  .md\:text-left {
+    text-align: left;
+  }
+
   .md\:text-center {
     text-align: center;
+  }
+
+  .md\:text-right {
+    text-align: right;
   }
 
   .md\:text-2xl {
@@ -1822,11 +2051,19 @@ body::-webkit-scrollbar-track {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+
+  .md\:leading-loose {
+    line-height: 2;
+  }
 }
 
 @media (min-width: 1000px) {
   .lg\:visible {
     visibility: visible;
+  }
+
+  .lg\:absolute {
+    position: absolute;
   }
 
   .lg\:relative {
@@ -1841,20 +2078,29 @@ body::-webkit-scrollbar-track {
     right: auto;
   }
 
+  .lg\:bottom-16 {
+    bottom: 4rem;
+  }
+
+  .lg\:right-2 {
+    right: 0.5rem;
+  }
+
   .lg\:m-0 {
     margin: 0px;
+  }
+
+  .lg\:my-\[100px\] {
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 
   .lg\:mb-0 {
     margin-bottom: 0px;
   }
 
-  .lg\:mb-\[-90px\] {
-    margin-bottom: -90px;
-  }
-
-  .lg\:mt-\[100px\] {
-    margin-top: 100px;
+  .lg\:mb-\[-190px\] {
+    margin-bottom: -190px;
   }
 
   .lg\:block {
@@ -1914,6 +2160,10 @@ body::-webkit-scrollbar-track {
     flex-basis: 23%;
   }
 
+  .lg\:basis-\[calc\(100\%-320px\)\] {
+    flex-basis: calc(100% - 320px);
+  }
+
   .lg\:basis-\[calc\(50\%-20px\)\] {
     flex-basis: calc(50% - 20px);
   }
@@ -1969,12 +2219,20 @@ body::-webkit-scrollbar-track {
     padding-bottom: 2rem;
   }
 
+  .lg\:pl-0 {
+    padding-left: 0px;
+  }
+
   .lg\:pl-2\.5 {
     padding-left: 0.625rem;
   }
 
   .lg\:pl-20 {
     padding-left: 5rem;
+  }
+
+  .lg\:pr-10 {
+    padding-right: 2.5rem;
   }
 
   .lg\:pr-8 {
@@ -2018,6 +2276,10 @@ body::-webkit-scrollbar-track {
     bottom: -3rem;
   }
 
+  .xl\:right-4 {
+    right: 1rem;
+  }
+
   .xl\:mb-8 {
     margin-bottom: 2rem;
   }
@@ -2054,6 +2316,10 @@ body::-webkit-scrollbar-track {
     padding: 3.5rem;
   }
 
+  .xl\:p-\[50px\] {
+    padding: 50px;
+  }
+
   .xl\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -2079,6 +2345,10 @@ body::-webkit-scrollbar-track {
 
   .xl\:pr-10 {
     padding-right: 2.5rem;
+  }
+
+  .xl\:pt-20 {
+    padding-top: 5rem;
   }
 
   .xl\:text-base {
@@ -2110,12 +2380,21 @@ body::-webkit-scrollbar-track {
     bottom: 1.25rem;
   }
 
-  .\32xl\:mt-2\.5 {
-    margin-top: 0.625rem;
+  .\32xl\:right-\[30px\] {
+    right: 30px;
   }
 
-  .\32xl\:mt-\[120px\] {
+  .\32xl\:my-\[120px\] {
     margin-top: 120px;
+    margin-bottom: 120px;
+  }
+
+  .\32xl\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
+  .\32xl\:mt-2\.5 {
+    margin-top: 0.625rem;
   }
 
   .\32xl\:block {
@@ -2189,12 +2468,24 @@ body::-webkit-scrollbar-track {
     padding-bottom: 1.25rem;
   }
 
+  .\32xl\:pb-\[60px\] {
+    padding-bottom: 60px;
+  }
+
   .\32xl\:pl-10 {
     padding-left: 2.5rem;
   }
 
   .\32xl\:pr-\[50px\] {
     padding-right: 50px;
+  }
+
+  .\32xl\:pr-\[60px\] {
+    padding-right: 60px;
+  }
+
+  .\32xl\:pt-\[100px\] {
+    padding-top: 100px;
   }
 
   .\32xl\:text-right {

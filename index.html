@@ -21,7 +21,7 @@
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body :class="sidebar ? 'fixed top-0':''" x-data="{sidebar: false}">
+<body :class="sidebar ? 'fixed top-0':''" @scroll.window="scrollTop = window.pageYOffset > 700" x-data="{sidebar: false, scrollTop: false}">
      <header
           class="relative flex flex-col justify-between 2xl:min-h-[900px] xl:min-h-[740px] lg:min-h-[700px] md:min-h-[640px] min-h-[520px] 2xl:px-20 2xl:py-14 xl:p-14 xl:pb-20 lg:pb-14 md:p-10 md:pb-16 p-5 pb-16 bg-no-repeat font-rex uppercase text-white bg-cover x-hero-bg">
           <div class="relative flex justify-between md:mt-2.5 mt-1.5 mb-5">
@@ -83,7 +83,7 @@
                               class="bg-[#d6a354] 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 mb-5 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313]">Online
                               appointment</a>
                          <a href=""
-                              class="bg-[rgba(19, 19, 19, .5)] 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 mb-5 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313]">About
+                              class="bg-[#13131380] 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 mb-5 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313]">About
                               Barbershop</a>
                     </div>
                </div>
@@ -118,7 +118,7 @@
      </header>
      <main>
           <!-- ABOUT SECTION -->
-          <section class="flex flex-wrap lg:flex-row flex-col w-full 2xl:mt-[120px] lg:mt-[100px] mt-[70px] 2xl:pr-[50px] xl:mt-[100px] bg-no-repeat x-about-bg">
+          <section class="flex flex-wrap lg:flex-row flex-col w-full 2xl:my-[120px] lg:my-[100px] mt-[70px] 2xl:pr-[50px] xl:mt-[100px] bg-no-repeat x-about-bg">
                <header class="2xl:w-[500px] md:w-[360px] md:max-w-max max-w-[325px] w-11/12 py-5 mb-8 skew-y-[-15deg] font-rex text-white">
                     <h2 class="relative md:py-5 md:px-10 p-5 mb-2.5 md:text-5xl text-4xl shadow-md shadow-[rgba(19,19,19,.25)] x-text-shadow-1 bg-[#d6a354] x-section-title">
                          About our<br>Barbershop
@@ -165,7 +165,7 @@
           </section>
           <!-- SERVICE SECTION -->
           <section>
-               <div class="lg:mb-[-90px] md:mb-[-110px] mb-5 md:pb-0 pb-5">
+               <div class="lg:mb-[-190px] md:mb-[-110px] mb-5 md:pb-0 pb-5">
                     <header class="2xl:w-[500px] md:w-[360px] md:max-w-[inherit] max-w-[325px] w-11/12 py-5 mb-8 skew-y-[-15deg] font-rex">
                          <h2 class="relative md:py-5 md:px-10 p-5 mb-2.5 md:text-5xl text-4xl shadow-md shadow-[rgba(19,19,19,.25)] x-text-shadow-1 bg-[#d6a354] text-white x-section-title">
                               Barbershop <br>Services
@@ -184,7 +184,7 @@
                               </div>
                               <div class="xl:pb-10 lg:pb-8 pb-5 xl:pr-10 lg:pr-8 pr-5 ml-auto">
                                    <a href=""
-                                        class="bg-[rgba(19, 19, 19, .5)] 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 text-center 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold uppercase border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313]">All
+                                        class="bg-[#13131380] 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 text-center 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold uppercase border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313]">All
                                         about haircuts</a>
                               </div>
                          </div>
@@ -196,13 +196,14 @@
                               </div>
                               <div class="xl:pb-10 lg:pb-8 pb-5 xl:pr-10 lg:pr-8 pr-5 ml-auto">
                                    <a href=""
-                                        class="bg-[rgba(19, 19, 19, .5)] 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 text-center 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold uppercase border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313]">Moustache
+                                        class="bg-[#13131380] 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 text-center 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold uppercase border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313]">Moustache
                                         and Beard</a>
                               </div>
                          </div>
                     </div>
                     <div class="md:flex flex-wrap justify-between">
-                         <div class="xl:max-w-[280px] lg:max-w-[240px] md:max-w-[340px] lg:basis-[23%] md:basis-[45%] mb-8 py-3.5 px-1 x-service-bg" style="background-image: url(/assets/img/icon/razor.svg);">
+                         <div class="xl:max-w-[280px] lg:max-w-[240px] md:max-w-[340px] lg:basis-[23%] md:basis-[45%] mb-8 py-3.5 px-1 x-service-bg"
+                              style="background-image: url(/assets/img/icon/razor.svg);">
                               <div class="2xl:text-2xl xl:text-xl lg:text-base md:text-2xl text-base font-rex uppercase">
                                    <p class="text-[.75em] text-[#d6a354]">For true Connoisseurs</p>
                                    <h3 class="md:mb-2 text-[1.25em] leading-tight text-[#131313]"><strong class="text-[1.4em]">Beard and Head</strong><br>Shaving</h3>
@@ -213,34 +214,40 @@
                                         Services</a>
                               </div>
                          </div>
-                         <div class="xl:max-w-[280px] lg:max-w-[240px] md:max-w-[340px] lg:basis-[23%] md:basis-[45%] mb-8 py-3.5 px-1 x-service-bg" style="background-image: url(/assets/img/icon/shavette.svg);">
+                         <div class="xl:max-w-[280px] lg:max-w-[240px] md:max-w-[340px] lg:basis-[23%] md:basis-[45%] mb-8 py-3.5 px-1 x-service-bg"
+                              style="background-image: url(/assets/img/icon/shavette.svg);">
                               <div class="2xl:text-2xl xl:text-xl lg:text-base md:text-2xl text-base font-rex uppercase">
                                    <p class="text-[.75em] text-[#d6a354]">For true Connoisseurs</p>
                                    <h3 class="md:mb-2 text-[1.25em] leading-tight text-[#131313]"><strong class="text-[1.5em]">Royal</strong><br>Shaving</h3>
                               </div>
                               <div class="text-right">
                                    <a href=""
-                                        class="bg-transparent 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 text-center 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold uppercase border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-[#d6a354] hover:text-white">For Connoisseurs</a>
+                                        class="bg-transparent 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 text-center 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold uppercase border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-[#d6a354] hover:text-white">For
+                                        Connoisseurs</a>
                               </div>
                          </div>
-                         <div class="xl:max-w-[280px] lg:max-w-[240px] md:max-w-[340px] lg:basis-[23%] md:basis-[45%] mb-8 py-3.5 px-1 x-service-bg" style="background-image: url(/assets/img/icon/tattoo.svg);">
+                         <div class="xl:max-w-[280px] lg:max-w-[240px] md:max-w-[340px] lg:basis-[23%] md:basis-[45%] mb-8 py-3.5 px-1 x-service-bg"
+                              style="background-image: url(/assets/img/icon/tattoo.svg);">
                               <div class="2xl:text-2xl xl:text-xl lg:text-base md:text-2xl text-base font-rex uppercase">
                                    <p class="text-[.75em] text-[#d6a354]">Best Professionals</p>
                                    <h3 class="md:mb-2 text-[1.25em] leading-tight text-[#131313]"><strong class="text-[1.5em]">Tattoo</strong><br>Services</h3>
                               </div>
                               <div class="text-right">
                                    <a href=""
-                                        class="bg-transparent 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 text-center 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold uppercase border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-[#d6a354] hover:text-white">Tattoo shop</a>
+                                        class="bg-transparent 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 text-center 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold uppercase border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-[#d6a354] hover:text-white">Tattoo
+                                        shop</a>
                               </div>
                          </div>
-                         <div class="xl:max-w-[280px] lg:max-w-[240px] md:max-w-[340px] lg:basis-[23%] md:basis-[45%] mb-8 py-3.5 px-1 x-service-bg" style="background-image: url(/assets/img/icon/spa.png);">
+                         <div class="xl:max-w-[280px] lg:max-w-[240px] md:max-w-[340px] lg:basis-[23%] md:basis-[45%] mb-8 py-3.5 px-1 x-service-bg"
+                              style="background-image: url(/assets/img/icon/spa.png);">
                               <div class="2xl:text-2xl xl:text-xl lg:text-base md:text-2xl text-base font-rex uppercase">
                                    <p class="text-[.75em] text-[#d6a354]">Comprehensive Care</p>
                                    <h3 class="md:mb-2 text-[1.25em] leading-tight text-[#131313]"><strong class="text-[1.5em]">Barber-Spa</strong><br>Services</h3>
                               </div>
                               <div class="text-right">
                                    <button disabled
-                                        class="2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 text-center 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold uppercase border-2 border-[#d6a354] rounded-full bg-[#d6a354] text-[#131313] x-bg-cross opacity-50">coming soon</button>
+                                        class="2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 text-center 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] text-sm leading-[36px] font-semibold uppercase border-2 border-[#d6a354] rounded-full bg-[#d6a354] text-[#131313] x-bg-cross opacity-50">coming
+                                        soon</button>
                               </div>
                          </div>
                     </div>
@@ -248,7 +255,7 @@
           </section>
           <!-- MAP SECTION -->
           <section>
-               <div class="md:pb-0 pb-5">
+               <div class="md:pb-0 pt-5 pb-5">
                     <header class="2xl:w-[500px] md:w-[360px] md:max-w-[inherit] max-w-[325px] w-11/12 py-5 mb-8 skew-y-[-15deg] font-rex">
                          <h2 class="relative md:py-5 md:px-10 p-5 mb-2.5 md:text-5xl text-4xl shadow-md shadow-[rgba(19,19,19,.25)] x-text-shadow-1 bg-[#d6a354] text-white x-section-title">
                               Branch <br>Mapr
@@ -257,10 +264,69 @@
                                    Network</span></p>
                     </header>
                </div>
+               <div class="flex justify-center -mt-[240px]"><img src="assets/img/Sverigekarta-Landskap_Lappland.svg" alt=""></div>
+               <div class="relative font-rex">
+                    <div class="flex flex-col items-center justify-center my-[30]">
+                         <h3 class="text-[#131313] flex items-center flex-col">
+                              <strong class="md:text-5xl text-3xl">Franchise</strong>
+                              <span class="text-xl">Oldboy Barbershop</span>
+                         </h3>
+                         <a href=""
+                              class="bg-[#d6a354] 2xl:min-w-[200px] lg:min-w-[180px] min-w-[200px] px-5 mb-5 2xl:text-sm 2xl:leading-[44px] lg:text-xs lg:leading-[36px] mt-[30px] text-sm leading-[36px] text-center font-sans text-white uppercase font-semibold border-2 border-[#d6a354] rounded-full x-animation-md hover:bg-white hover:text-[#131313]">Open
+                              your Barbershop</a>
+                    </div>
+                    <div class="lg:absolute 2xl:right-[30px] 2xl:text-xl xl:right-4 xl:text-base lg:right-2 lg:bottom-16 lg:text-sm md:text-2xl text-base flex justify-center items-center px-5">
+                         <p class="text-[#d6a354] text-8xl font-rex-inline">298</p>
+                         <p class="p-1.5 text-base text-nowrap border-y-2 border-[#d6a354]">
+                              <strong class="text-4xl">BRANCHES</strong><br>
+                              in 11 countries and in 7 capitals
+                         </p>
+                    </div>
+               </div>
           </section>
+          <!-- SCROLL TOP BUTTON -->
+          <button @click="window.scrollTo({ top: 0, behavior: 'smooth' });" :class="scrollTop?'opacity-100 visible':'opacity-0 invisible'"
+               class="fixed bottom-5 left-5 w-12 h-12 bg-[#13131380] border-2 border-[#d6a354] rounded-full cursor-pointer x-animation-md z-[999]"><img class="w-5 mx-auto"
+                    src="assets/img/icon/scroll-up.svg" alt=""></button>
      </main>
-     <footer class="">
-
+     <footer class="2xl:mt-10 mt-5 2xl:pt-[100px] 2xl:px-20 2xl:pb-[60px] xl:p-[50px] xl:pt-20 md:pt-20 md:p-10 px-5 pb-10 pt-[60px] md:text-left text-center text-white x-footer-bg">
+          <div class="flex flex-wrap items-end">
+               <div class="2xl:pr-[60px] lg:pr-10 lg:pl-0 md:w-80 p-5 pt-0">
+                    <a class="md:pr-2.5 md:pb-[30px] md:p-0 px-10 py-2.5" href=""><img src="assets/img/logo.svg" alt=""></a>
+                    <h2 class="font-rex text-[#d6a354] text-xl uppercase my-4">298 BRANCHES in 11 countries and in 7 capitals </h2>
+                    <p class="text-sm uppercase my-4">The largest Barbershop network</p>
+                    <p class="md:mb-2 text-sm text-[#aeaeae]">Oldboy barbershop is a lot more than just a man's hairdresser, it is even far more than a social club for men, it is exactly the place
+                         where you will find yourself and your identity.</p>
+               </div>
+               <div class="lg:basis-[calc(100%-320px)] w-full md:flex justify-between md:py-10 md:px-5 mb-10 border-y-2 border-[#d6a354] font-rex">
+                    <div class="md:block hidden basis-1/4">
+                         <h3 class="md:text-2xl text-xl pt-4 text-[#aeaeae] leading-loose">Menu</h3>
+                         <ul class="pb-4">
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">main</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">SERVICES</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">FRANCHISE</a></li>
+                         </ul>
+                    </div>
+                    <div class="md:block hidden basis-1/4">
+                         <h3 class="md:text-2xl text-xl pt-4 text-[#aeaeae] leading-loose">Services</h3>
+                         <ul class="pb-4">
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">HAIRCUTS</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">MOUSTACHE AND BEARD</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">STRAIGHT RAZOR SHAVING</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">ROYAL SHAVE</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">TATTOO</a></li>
+                         </ul>
+                    </div>
+                    <div class="md:basis-1/4 ">
+                         <h3 class="md:text-2xl text-xl pt-4 text-[#aeaeae] leading-loose">Info</h3>
+                         <ul class="pb-4">
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">PRIVACY POLICY</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">TERMS AND CONDITIONS</a></li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+          <div class="md:text-right font-semibold text-sm text-[#aeaeae] uppercase">© 2014–2024 Oldboy Barbershop</div>
      </footer>
 </body>
 

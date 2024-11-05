@@ -81,6 +81,7 @@
 }
 
 @layer utilities {
+  /* SCROLL */
   body::-webkit-scrollbar {
     width: 8px;
   }
@@ -91,10 +92,33 @@
   body::-webkit-scrollbar-track {
     background: 0 0;
   }
+  /* CUSTOM BACKGROUND IMAGE */
   .x-hero-bg {
     background-image: url(/assets/img/bg/hero-bg-mobile.jpg);
     background-position: bottom center;
   }
+  .x-footer-bg {
+    background-color: #131313;
+    background-image: url(/assets/img/white-grunge-180.svg);
+    background-repeat: no-repeat;
+    background-position: top -170px center;
+    background-size: 800px;
+  }
+  .x-bg-cross {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      #fff 10px,
+      #fff 20px
+    );
+  }
+  .x-service-bg {
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: bottom 40px right 160px;
+  }
+  /* IMAGE OVERLAY */
   .x-hero::after {
     position: absolute;
     left: 0;
@@ -108,6 +132,31 @@
     background-position: top 2px center;
     background-size: 800px;
   }
+  .x-section-title::after {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 40px;
+    height: 100%;
+    background-image: url(/assets/img/gold-v-grunge.svg);
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
+    content: "";
+  }
+  .x-bg-about-img::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background-image: url(/assets/img/white-grunge-90.svg);
+    background-repeat: no-repeat;
+    background-position: center left 20px;
+    background-size: 150px;
+    content: "";
+  }
+  /* CUSTOM NAV MENU TOGGLE */
   .x-toggle-btn::before {
     top: 14px;
     content: "";
@@ -149,48 +198,12 @@
     transform: rotate(-45deg);
     transform-origin: left center;
   }
-  .x-section-title::after {
-    position: absolute;
-    top: 0;
-    right: -20px;
-    width: 40px;
-    height: 100%;
-    background-image: url(/assets/img/gold-v-grunge.svg);
-    background-repeat: repeat-y;
-    background-position: center center;
-    background-size: cover;
-    content: "";
-  }
-  .x-bg-about-img::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 100%;
-    background-image: url(/assets/img/white-grunge-90.svg);
-    background-repeat: no-repeat;
-    background-position: center left 20px;
-    background-size: 150px;
-    content: "";
-  }
+  /* TEXT SHADOW */
   .x-text-shadow-1 {
     text-shadow: -3px 2px 0 #896322;
   }
-  .x-bg-cross {
-    background-image: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 10px,
-      #fff 10px,
-      #fff 20px
-    );
-  }
-  .x-service-bg{
-    background-size: 100px;
-    background-repeat: no-repeat;
-    background-position: bottom 40px right 160px;
-  }
   @media (min-width: 700px) {
+    /* CUSTOM BACKGROUND IMAGE */
     .x-hero-bg {
       background-image: url(/assets/img/bg/hero-t.jpg);
     }
@@ -199,18 +212,27 @@
       background-position: top right;
       background-size: 1000px;
     }
+    .x-footer-bg {
+      background-image: url(/assets/img/white-grunge-180.svg),
+        url(/assets/img/bg/barberpull.jpg);
+      background-repeat: repeat-x, no-repeat;
+      background-position: top -170px center, center center;
+      background-size: 799px, cover;
+    }
+    .x-service-bg {
+      background-size: 120px;
+      background-position: center right;
+    }
+    /* TEXT SHADOW */
     .x-text-shadow-1 {
       text-shadow: -4px 3px 0 #896322;
     }
     .x-text-shadow-2 {
       text-shadow: 0 0 20px #896322;
     }
-    .x-service-bg{
-      background-size: 120px;
-      background-position: center right;
-    }
   }
   @media (min-width: 1000px) {
+    /* CUSTOM BACKGROUND IMAGE */
     .x-hero-bg {
       background-image: url(/assets/img/bg/hero.jpg);
       background-position: bottom center;
@@ -218,21 +240,23 @@
     .x-about-bg {
       background-size: 900px;
     }
-    .x-service-bg{
+    .x-service-bg {
       background-size: 80px;
       background-position: center right 10px;
     }
   }
 }
 @media (min-width: 1200px) {
+  /* CUSTOM BACKGROUND IMAGE */
   .x-about-bg {
     background-size: 1200px;
   }
-  .x-service-bg{
+  .x-service-bg {
     background-size: 100px;
   }
 }
 @media (min-width: 1500px) {
+  /* CUSTOM BACKGROUND IMAGE */
   .x-about-bg {
     background-size: 1400px;
   }
