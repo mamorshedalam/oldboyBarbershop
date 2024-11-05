@@ -746,6 +746,11 @@ input:focus,
   margin: 1.25rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .my-2\.5 {
   margin-top: 0.625rem;
   margin-bottom: 0.625rem;
@@ -773,6 +778,10 @@ input:focus,
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .mb-8 {
@@ -843,6 +852,10 @@ input:focus,
   height: 300px;
 }
 
+.h-\[calc\(56\.25vw-40px\)\] {
+  height: calc(56.25vw - 40px);
+}
+
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
@@ -850,6 +863,10 @@ input:focus,
 
 .h-full {
   height: 100%;
+}
+
+.min-h-\[180px\] {
+  min-height: 180px;
 }
 
 .min-h-\[520px\] {
@@ -870,6 +887,10 @@ input:focus,
 
 .w-16 {
   width: 4rem;
+}
+
+.w-2\/5 {
+  width: 40%;
 }
 
 .w-20 {
@@ -1003,6 +1024,10 @@ input:focus,
   overflow: hidden;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -1043,8 +1068,16 @@ input:focus,
   background-color: rgba(19,19,19,.5);
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-cover {
   background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .bg-no-repeat {
@@ -1057,6 +1090,15 @@ input:focus,
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-\[5vw\] {
+  padding: 5vw;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .px-10 {
@@ -1084,6 +1126,11 @@ input:focus,
   padding-bottom: 0.75rem;
 }
 
+.py-3\.5 {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1098,6 +1145,10 @@ input:focus,
   padding-bottom: 4rem;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
 .pl-10 {
   padding-left: 2.5rem;
 }
@@ -1108,6 +1159,10 @@ input:focus,
 
 .pr-16 {
   padding-right: 4rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
 }
 
 .pt-4 {
@@ -1166,8 +1221,32 @@ input:focus,
   line-height: 1;
 }
 
+.text-\[\.75em\] {
+  font-size: .75em;
+}
+
+.text-\[\.85em\] {
+  font-size: .85em;
+}
+
 .text-\[0\.5rem\] {
   font-size: 0.5rem;
+}
+
+.text-\[1\.25em\] {
+  font-size: 1.25em;
+}
+
+.text-\[1\.4em\] {
+  font-size: 1.4em;
+}
+
+.text-\[1\.5em\] {
+  font-size: 1.5em;
+}
+
+.text-\[4vw\] {
+  font-size: 4vw;
 }
 
 .text-base {
@@ -1220,6 +1299,10 @@ input:focus,
   line-height: 1;
 }
 
+.leading-tight {
+  line-height: 1.25;
+}
+
 .tracking-wider {
   letter-spacing: 0.05em;
 }
@@ -1244,14 +1327,18 @@ input:focus,
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.opacity-50 {
+  opacity: 0.5;
+}
+
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-black\/25 {
-  --tw-shadow-color: rgb(0 0 0 / 0.25);
+.shadow-\[rgba\(19\2c 19\2c 19\2c \.25\)\] {
+  --tw-shadow-color: rgba(19,19,19,.25);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -1321,7 +1408,7 @@ body::-webkit-scrollbar-track {
   transform-origin: left center;
 }
 
-.x-bg-about-title::after{
+.x-section-title::after {
   position: absolute;
   top: 0;
   right: -20px;
@@ -1347,6 +1434,26 @@ body::-webkit-scrollbar-track {
   content: "";
 }
 
+.x-text-shadow-1 {
+  text-shadow: -3px 2px 0 #896322;
+}
+
+.x-bg-cross {
+  background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      #fff 10px,
+      #fff 20px
+    );
+}
+
+.x-service-bg{
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: bottom 40px right 160px;
+}
+
 @media (min-width: 700px) {
   .x-hero-bg {
     background-image: url(/assets/img/bg/hero-t.jpg);
@@ -1354,6 +1461,8 @@ body::-webkit-scrollbar-track {
 
   .x-about-bg {
     background-image: url(/assets/img/bg/price-bottom-d.jpg);
+    background-position: top right;
+    background-size: 1000px;
   }
 
   .x-text-shadow-1 {
@@ -1363,12 +1472,42 @@ body::-webkit-scrollbar-track {
   .x-text-shadow-2 {
     text-shadow: 0 0 20px #896322;
   }
+
+  .x-service-bg{
+    background-size: 120px;
+    background-position: center right;
+  }
 }
 
 @media (min-width: 1000px) {
   .x-hero-bg {
     background-image: url(/assets/img/bg/hero.jpg);
     background-position: bottom center;
+  }
+
+  .x-about-bg {
+    background-size: 900px;
+  }
+
+  .x-service-bg{
+    background-size: 80px;
+    background-position: center right 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .x-about-bg {
+    background-size: 1200px;
+  }
+
+  .x-service-bg{
+    background-size: 100px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .x-about-bg {
+    background-size: 1400px;
   }
 }
 
@@ -1450,6 +1589,11 @@ body::-webkit-scrollbar-track {
   --tw-gradient-to: rgba(214,163,84,.75) var(--tw-gradient-to-position);
 }
 
+.hover\:bg-\[\#d6a354\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 163 84 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1463,6 +1607,11 @@ body::-webkit-scrollbar-track {
 .hover\:text-\[\#d6a354\]:hover {
   --tw-text-opacity: 1;
   color: rgb(214 163 84 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:bg-\[\#d6a354\] {
@@ -1502,6 +1651,18 @@ body::-webkit-scrollbar-track {
     margin-bottom: 0px;
   }
 
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .md\:mb-\[-110px\] {
+    margin-bottom: -110px;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -1518,12 +1679,20 @@ body::-webkit-scrollbar-track {
     display: flex;
   }
 
+  .md\:max-h-\[340px\] {
+    max-height: 340px;
+  }
+
   .md\:min-h-\[640px\] {
     min-height: 640px;
   }
 
   .md\:w-1\/3 {
     width: 33.333333%;
+  }
+
+  .md\:w-3\/5 {
+    width: 60%;
   }
 
   .md\:w-9 {
@@ -1538,13 +1707,33 @@ body::-webkit-scrollbar-track {
     width: 360px;
   }
 
+  .md\:max-w-\[340px\] {
+    max-width: 340px;
+  }
+
+  .md\:max-w-\[inherit\] {
+    max-width: inherit;
+  }
+
   .md\:max-w-max {
     max-width: -moz-max-content;
     max-width: max-content;
   }
 
+  .md\:basis-\[45\%\] {
+    flex-basis: 45%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
   .md\:flex-col {
     flex-direction: column;
+  }
+
+  .md\:items-end {
+    align-items: flex-end;
   }
 
   .md\:justify-start {
@@ -1569,6 +1758,10 @@ body::-webkit-scrollbar-track {
     padding-bottom: 1.25rem;
   }
 
+  .md\:pb-0 {
+    padding-bottom: 0px;
+  }
+
   .md\:pb-16 {
     padding-bottom: 4rem;
   }
@@ -1589,6 +1782,11 @@ body::-webkit-scrollbar-track {
     text-align: center;
   }
 
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1601,6 +1799,23 @@ body::-webkit-scrollbar-track {
 
   .md\:text-\[0\.65rem\] {
     font-size: 0.65rem;
+  }
+
+  .md\:text-\[1\.25em\] {
+    font-size: 1.25em;
+  }
+
+  .md\:text-\[1\.75em\] {
+    font-size: 1.75em;
+  }
+
+  .md\:text-\[1\.9em\] {
+    font-size: 1.9em;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:text-lg {
@@ -1630,6 +1845,14 @@ body::-webkit-scrollbar-track {
     margin: 0px;
   }
 
+  .lg\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .lg\:mb-\[-90px\] {
+    margin-bottom: -90px;
+  }
+
   .lg\:mt-\[100px\] {
     margin-top: 100px;
   }
@@ -1638,8 +1861,16 @@ body::-webkit-scrollbar-track {
     display: block;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-\[calc\(31\.25vw-60px\)\] {
+    height: calc(31.25vw - 60px);
   }
 
   .lg\:min-h-\[700px\] {
@@ -1654,6 +1885,10 @@ body::-webkit-scrollbar-track {
     width: 50%;
   }
 
+  .lg\:w-auto {
+    width: auto;
+  }
+
   .lg\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
@@ -1663,12 +1898,24 @@ body::-webkit-scrollbar-track {
     min-width: 180px;
   }
 
+  .lg\:max-w-\[240px\] {
+    max-width: 240px;
+  }
+
   .lg\:max-w-full {
     max-width: 100%;
   }
 
   .lg\:flex-grow {
     flex-grow: 1;
+  }
+
+  .lg\:basis-\[23\%\] {
+    flex-basis: 23%;
+  }
+
+  .lg\:basis-\[calc\(50\%-20px\)\] {
+    flex-basis: calc(50% - 20px);
   }
 
   .lg\:flex-row {
@@ -1683,12 +1930,20 @@ body::-webkit-scrollbar-track {
     justify-content: flex-start;
   }
 
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
   .lg\:gap-2\.5 {
     gap: 0.625rem;
   }
 
   .lg\:bg-transparent {
     background-color: transparent;
+  }
+
+  .lg\:p-8 {
+    padding: 2rem;
   }
 
   .lg\:px-10 {
@@ -1710,6 +1965,10 @@ body::-webkit-scrollbar-track {
     padding-bottom: 3.5rem;
   }
 
+  .lg\:pb-8 {
+    padding-bottom: 2rem;
+  }
+
   .lg\:pl-2\.5 {
     padding-left: 0.625rem;
   }
@@ -1718,8 +1977,21 @@ body::-webkit-scrollbar-track {
     padding-left: 5rem;
   }
 
+  .lg\:pr-8 {
+    padding-right: 2rem;
+  }
+
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-\[1\.25em\] {
+    font-size: 1.25em;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .lg\:text-sm {
@@ -1766,8 +2038,16 @@ body::-webkit-scrollbar-track {
     width: 500px;
   }
 
+  .xl\:max-w-\[280px\] {
+    max-width: 280px;
+  }
+
   .xl\:gap-5 {
     gap: 1.25rem;
+  }
+
+  .xl\:p-10 {
+    padding: 2.5rem;
   }
 
   .xl\:p-14 {
@@ -1779,13 +2059,26 @@ body::-webkit-scrollbar-track {
     padding-right: 3rem;
   }
 
+  .xl\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .xl\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
+  .xl\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
   .xl\:pb-20 {
     padding-bottom: 5rem;
+  }
+
+  .xl\:pr-10 {
+    padding-right: 2.5rem;
   }
 
   .xl\:text-base {
@@ -1796,6 +2089,11 @@ body::-webkit-scrollbar-track {
   .xl\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1832,6 +2130,10 @@ body::-webkit-scrollbar-track {
     height: 400px;
   }
 
+  .\32xl\:max-h-\[360px\] {
+    max-height: 360px;
+  }
+
   .\32xl\:min-h-\[900px\] {
     min-height: 900px;
   }
@@ -1854,6 +2156,10 @@ body::-webkit-scrollbar-track {
 
   .\32xl\:min-w-\[200px\] {
     min-width: 200px;
+  }
+
+  .\32xl\:max-w-\[1500px\] {
+    max-width: 1500px;
   }
 
   .\32xl\:flex-row {

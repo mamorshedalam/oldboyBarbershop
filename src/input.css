@@ -149,17 +149,17 @@
     transform: rotate(-45deg);
     transform-origin: left center;
   }
-  .x-bg-about-title::after{
+  .x-section-title::after {
     position: absolute;
-  top: 0;
-  right: -20px;
-  width: 40px;
-  height: 100%;
-  background-image: url(/assets/img/gold-v-grunge.svg);
-  background-repeat: repeat-y;
-  background-position: center center;
-  background-size: cover;
-  content: "";
+    top: 0;
+    right: -20px;
+    width: 40px;
+    height: 100%;
+    background-image: url(/assets/img/gold-v-grunge.svg);
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
+    content: "";
   }
   .x-bg-about-img::after {
     position: absolute;
@@ -173,12 +173,31 @@
     background-size: 150px;
     content: "";
   }
+  .x-text-shadow-1 {
+    text-shadow: -3px 2px 0 #896322;
+  }
+  .x-bg-cross {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      #fff 10px,
+      #fff 20px
+    );
+  }
+  .x-service-bg{
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: bottom 40px right 160px;
+  }
   @media (min-width: 700px) {
     .x-hero-bg {
       background-image: url(/assets/img/bg/hero-t.jpg);
     }
     .x-about-bg {
       background-image: url(/assets/img/bg/price-bottom-d.jpg);
+      background-position: top right;
+      background-size: 1000px;
     }
     .x-text-shadow-1 {
       text-shadow: -4px 3px 0 #896322;
@@ -186,11 +205,35 @@
     .x-text-shadow-2 {
       text-shadow: 0 0 20px #896322;
     }
+    .x-service-bg{
+      background-size: 120px;
+      background-position: center right;
+    }
   }
   @media (min-width: 1000px) {
     .x-hero-bg {
       background-image: url(/assets/img/bg/hero.jpg);
       background-position: bottom center;
     }
+    .x-about-bg {
+      background-size: 900px;
+    }
+    .x-service-bg{
+      background-size: 80px;
+      background-position: center right 10px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .x-about-bg {
+    background-size: 1200px;
+  }
+  .x-service-bg{
+    background-size: 100px;
+  }
+}
+@media (min-width: 1500px) {
+  .x-about-bg {
+    background-size: 1400px;
   }
 }
