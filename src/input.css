@@ -97,6 +97,20 @@
     background-image: url(/assets/img/bg/hero-bg-mobile.jpg);
     background-position: bottom center;
   }
+  .x-service-hero::after,
+  .x-hero-bg::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    content: "";
+    bottom: -40px;
+    z-index: 7;
+    height: 80px;
+    background-image: url(/assets/img/white-grunge.svg);
+    background-repeat: repeat-x;
+    background-position: top 2px center;
+    background-size: 800px;
+  }
   .x-footer-bg {
     background-color: #131313;
     background-image: url(/assets/img/white-grunge-180.svg);
@@ -112,6 +126,18 @@
       #fff 10px,
       #fff 20px
     );
+    background-repeat: repeat-x;
+  }
+  .x-bg-cross-gray {
+    color: #131313;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      #fff 10px,
+      #fff 20px
+    );
+    background-repeat: repeat-x;
   }
   .x-service-bg {
     background-size: 100px;
@@ -199,8 +225,48 @@
     transform-origin: left center;
   }
   /* TEXT SHADOW */
+  .x-writing-mode {
+    writing-mode: vertical-rl;
+  }
   .x-text-shadow-1 {
     text-shadow: -3px 2px 0 #896322;
+  }
+  /* ARROW */
+  .x-popup-arrow-right {
+    width: 7px;
+    height: 13px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-image: url(/assets/img/keyboard_arrow_right.svg);
+  }
+  .x-popup-arrow-animate-right {
+    background-image: url(/assets/img/keyboard_arrow_right.svg);
+    animation: rightmover 1.5s ease-in-out forwards;
+    animation-iteration-count: infinite !important
+  }
+  .x-popup-arrow-left {
+    width: 7px;
+    height: 13px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-image: url(/assets/img/keyboard_arrow_left.svg);
+  }
+  .x-popup-arrow-animate-left {
+    background-image: url(/assets/img/keyboard_arrow_left.svg);
+    animation: rightmover 1.5s ease-in-out forwards;
+    animation-iteration-count: infinite !important
+  }
+  @keyframes rightmover {
+    0% {
+      transform: translateX(0);
+    }
+    80% {
+      opacity: 0.8;
+    }
+    to {
+      transform: translateX(5px);
+      opacity: 0.6;
+    }
   }
   @media (min-width: 700px) {
     /* CUSTOM BACKGROUND IMAGE */
