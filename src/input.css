@@ -85,7 +85,7 @@
   body::-webkit-scrollbar {
     width: 8px;
   }
-  body::-webkit-slider-thumb {
+  body::-webkit-scrollbar-thumb {
     background: #d6a354;
     border-radius: 10px;
   }

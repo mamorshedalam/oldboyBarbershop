@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- FAVICON && TITLE -->
+     <title>Model men's haircuts: types, prices, photos | Oldboy</title>
+     <link rel="icon" type="image/png" sizes="32x32" href="/assets//img/icon/favicon-32x32.png">
+     <!-- CUSTOM CSS -->
+     <style>
+          /* it need to work x-clock hidden */
+          [x-cloak] {
+               display: none !important;
+          }
+     </style>
+     <!-- TAILWIND CSS -->
+     <link href="./assets/css/output.css" rel="stylesheet">
+     <!-- ALPINE JS -->
+     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body :class="sidebar ? 'fixed top-0':''" @scroll.window="scrollTop = window.pageYOffset > 700" x-data="{sidebar: false, scrollTop: false}">
+     <header
+          class="relative flex flex-col justify-between 2xl:px-20 2xl:py-14 xl:p-14 xl:pb-20 lg:pb-14 md:p-10 md:pb-16 p-5 pb-16 font-rex uppercase text-white lg:bg-[url('/assets/img/bg/haircut-d.jpg')] bg-[url('/assets/img/bg/haircut-m.jpg')] bg-cover bg-center bg-no-repeat x-hero">
+          <div class="relative flex justify-between md:mt-2.5 mt-1.5">
+               <div class="xs:block hidden md:w-[120px] w-[85px]"><img src="assets/img/logo.svg" alt="Oldboy Barbershop Main Page"></div>
+               <nav :class="sidebar?'right-0':'lg:right-auto -right-full'"
+                    class="lg:relative fixed top-0 bottom-0 lg:visible lg:opacity-100 lg:flex-grow lg:w-0 w-full lg:max-w-full max-w-[400px] 2xl:text-xl lg:text-sm text-2xl lg:bg-transparent bg-[#131313]/90 z-[99] x-animation-md">
+                    <ul class="flex lg:flex-row flex-col lg:items-start items-center lg:justify-start justify-center h-full 2xl:pl-10 lg:pl-2.5 xl:gap-5 lg:gap-2.5 gap-5">
+                         <li class="lg:m-0 m-5"><a href="" class="hover:text-[#d6a354] x-animation-md">Main</a></li>
+                         <li class="lg:m-0 m-5"><a href="" class="hover:text-[#d6a354] x-animation-md">Services</a></li>
+                         <li class="lg:m-0 m-5"><a href="" class="hover:text-[#d6a354] x-animation-md">Franchise</a></li>
+                    </ul>
+               </nav>
+               <div class="md:pl-20 pr-16 flex gap-3">
+                    <button class="group flex gap-1">
+                         <div class="md:w-9 w-8"><img src="assets/img/icon/place.svg" alt=""></div>
+                         <div>
+                              <p class="lg:text-xs md:text-[0.65rem] text-[0.5rem] text-[#d6a354]">Choose Barbershop <span>▼</span></p>
+                              <p class="md:text-lg text-base text-left group-hover:text-[#d6a354] x-animation-md">Europe</p>
+                         </div>
+                    </button>
+               </div>
+               <button @click="sidebar = !sidebar"
+                    class="lg:hidden block fixed md:top-11 md:right-8 top-5 right-5 h-12 w-12 bg-[rgba(19,19,19,.5)] border-2 border-[#d6a354] rounded-full x-animation-md z-[999] x-toggle-btn"
+                    :class="sidebar ? 'x-toggle-close':''">
+                    <span></span>
+               </button>
+          </div>
+          <div class="flex lg:flex-row lg:flex-grow-[2] items-stretch justify-between flex-col flex-grow pt-5">
+               <div class="flex flex-col justify-between lg:w-fit w-full pb-10">
+                    <div class="md:w-[285px] w-[200px] -skew-y-[15deg] py-10">
+                         <h1 class="relative inline-block font-bold 2xl:text-[5rem] xl:text-[4rem] md:text-[3.5rem] text-4xl leading-none my-1.5 py-1.5 border-y-[3px] border-[#d6a354]">
+                              <span>Men's <br>Haircuts</span>
+                              <img class="absolute top-0 left-full h-full" src="assets/img/icon/scissors.svg" alt="">
+                         </h1>
+                         <p class="md:text-lg text-base leading-normal">Oldboy barbershop <br>high quality only</p>
+                    </div>
+               </div>
+          </div>
+     </header>
+     <main>
+          <!-- WELCOME SECTION -->
+          <section class="2xl:max-w-[1500px] lg:flex md:p-10 p-5 pb-10 mx-auto lg:mb-[60px]">
+               <div class="relative pr-10 pb-5">
+                    <div class="lg:w-80 md:w-60 w-40 overflow-hidden rounded-[5px]"><img src="assets/img/haircut.jpg" alt=""></div>
+                    <div
+                         class="absolute lg:top-[120px] lg:-left-10 md:-top-10 md:left-[70px] md:w-[401px] md:h-[309px] md:bg-[url('/assets/img/scissors-l.png')] -top-[30px] left-[30px] w-[297px] h-[232px] bg-[url('/assets/img/scissors-m.png')] bg-cover">
+                    </div>
+               </div>
+               <div class="space-y-4 text-[#131313]">
+                    <h2 class="md:text-3xl text-2xl font-rex leading-normal mb-6">Welcome to Oldboy</h2>
+                    <p class="xl:text-base text-sm xl:leading-loose leading-loose font-semibold tracking-wider uppercase text-[#896322]">Elegance means not only easiness and freedom from any
+                         restrictions and a sense of confidence. It means inspiration, gloss, each detail honed to perfection.</p>
+                    <p class="xl:text-lg text-base">Hairstyles for men have a great variety. Choosing the right haircut, everyone can reflect their lifestyle and character, because a stylish haircut
+                         is one of the key details of the everyday look, along with a suit in shape, high-quality shoes and the aroma of perfume. People around you always pay attention to your
+                         hairstyle - looking at you, they first of all see your face, and how it is emphasized, so it is important to give enough time and attention to the haircut.</p>
+                    <p class="xl:text-lg text-base">Nowadays, the fashion industry regularly offers us fresh trends, erases long-term stereotypes that are associated with fashion and style. Men prefer
+                         hair coloring and creative, fashionable haircuts. After all, a modern man with a quality long or short hairstyle invariably looks confident and representative.</p>
+                    <p class="xl:text-lg text-base">Now the color, shape of the haircut or accessories is not so important as the hair itself, their health and well-groomed appearance, so you need to
+                         get a haircut from a professional in your field. We are well versed in this, men's haircuts and shaving are our specialization, the work of our masters is appreciated by
+                         everyone who comes to OldBoy.</p>
+                    <p class="xl:text-lg text-base">Prices for men's haircuts in the OldBoy barbershop network start at 600 rubles (depending on the region). The selection of style and hairstyle is
+                         included in the price of the service, and we also provide comfort, a brutal atmosphere, good company and coffee, or stronger drinks.</p>
+                    <p class="xl:text-lg text-base">When you visit the OldBoy barbershop, you can choose the specific components of the hairstyle that you like. If you want to understand in advance
+                         what kind of hairstyle you need, we have already prepared. To make it easier for you to choose and determine your desired haircut style, OldBoy brings to your attention some
+                         types and names of model men's haircuts, which we will be happy to do for you!</p>
+               </div>
+          </section>
+
+          <!-- HAIRCUT SECTION -->
+          <section class="2xl:mb-[60px]">
+               <div class="2xl:mb-10 mb-5">
+                    <header class="relative 2xl:w-[500px] md:w-[360px] md:max-w-[inherit] max-w-[325px] w-11/12 skew-y-[-15deg] font-rex z-50">
+                         <h2 class="relative md:py-5 md:px-10 p-5 mb-2.5 md:text-5xl text-4xl shadow-md shadow-[rgba(19,19,19,.25)] x-text-shadow-1 bg-[#d6a354] text-white x-section-title">
+                              Crop cut
+                         </h2>
+                         <p class="relative flex items-center w-full md:pr-5 md:text-3xl text-2xl text-white x-text-shadow-2 z-10">
+                              <span class="w-0 flex-grow h-1 mr-3 bg-[#896322]"></span><span>Timeless Classics</span>
+                         </p>
+                    </header>
+                    <div class="2xl:max-w-[1500px] lg:h-auto md:h-[calc(60vw-40px)] 2xl:-mt-[100px] -mt-[75px] md:px-10 px-5 flex flex-wrap lg:flex-row md:flex-col items-start justify-between mx-auto">
+                         <div class="lg:block hidden lg:basis-[23%] w-full overflow-hidden rounded-[5px] bg-[#d6a354]"><img class="w-full" src="assets/img/haircut/crop1.jpg" alt=""></div>
+                         <div class="lg:basis-[23%] basis-full lg:w-auto lg:h-auto md:w-[calc(63vw-40px)] md:h-[calc(63vw-40px)] w-[calc(100vw-40px)] h-[calc(100vw-40px)] lg:mr-0 md:mr-3.5 md:mb-0 mb-5 overflow-hidden rounded-[5px] bg-[#d6a354]"><img class="w-full" src="assets/img/haircut/crop2.jpg" alt=""></div>
+                         <div class="lg:basis-[23%] md:basis-[calc(30vw-30px)] basis-[calc((100%-20px)/2)] lg:w-auto lg:h-auto md:w-[calc(30vw-30px)] md:h-[calc(30vw-30px)] w-[calc((100vw-60px)/2)] h-[calc((100vw-60px)/2)] lg:mr-0 md:mr-3.5 md:mb-0 mb-5 overflow-hidden rounded-[5px] bg-[#d6a354]"><img class="w-full" src="assets/img/haircut/crop3.jpg" alt=""></div>
+                         <div class="lg:basis-[23%] md:basis-[calc(30vw-30px)] basis-[calc((100%-20px)/2)] lg:w-auto lg:h-auto md:w-[calc(30vw-30px)] md:h-[calc(30vw-30px)] w-[calc((100vw-60px)/2)] h-[calc((100vw-60px)/2)] lg:mr-0 md:mr-3.5 md:mb-0 mb-5 overflow-hidden rounded-[5px] bg-[#d6a354]"><img class="w-full" src="assets/img/haircut/crop4.jpg" alt=""></div>
+                    </div>
+               </div>
+               <div class="lg:flex items-start 2xl:max-w-[1500px] md:p-10 p-5 mx-auto">
+                    <p class="2xl:basis-[450px] lg: 2xl:mr-[50px] text-3xl"></p>
+               </div>
+          </section>
+
+          <!-- SCROLL TOP BUTTON -->
+          <button @click="window.scrollTo({ top: 0, behavior: 'smooth' });" :class="scrollTop?'opacity-100 visible':'opacity-0 invisible'"
+               class="fixed bottom-5 left-5 w-12 h-12 bg-[#13131380] border-2 border-[#d6a354] rounded-full cursor-pointer x-animation-md z-[999]"><img class="w-5 mx-auto"
+                    src="assets/img/icon/scroll-up.svg" alt=""></button>
+     </main>
+     <footer class="2xl:mt-10 mt-5 2xl:pt-[100px] 2xl:px-20 2xl:pb-[60px] xl:p-[50px] xl:pt-20 md:pt-20 md:p-10 px-5 pb-10 pt-[60px] md:text-left text-center text-white x-footer-bg">
+          <div class="flex flex-wrap items-end">
+               <div class="2xl:pr-[60px] lg:pr-10 lg:pl-0 md:w-80 p-5 pt-0">
+                    <a class="md:pr-2.5 md:pb-[30px] md:p-0 px-10 py-2.5" href=""><img src="assets/img/logo.svg" alt=""></a>
+                    <h2 class="font-rex text-[#d6a354] text-xl uppercase my-4">298 BRANCHES in 11 countries and in 7 capitals </h2>
+                    <p class="text-sm uppercase my-4">The largest Barbershop network</p>
+                    <p class="md:mb-2 text-sm text-[#aeaeae]">Oldboy barbershop is a lot more than just a man's hairdresser, it is even far more than a social club for men, it is exactly the place
+                         where you will find yourself and your identity.</p>
+               </div>
+               <div class="lg:basis-[calc(100%-320px)] w-full md:flex justify-between md:py-10 md:px-5 mb-10 border-y-2 border-[#d6a354] font-rex">
+                    <div class="md:block hidden basis-1/4">
+                         <h3 class="md:text-2xl text-xl pt-4 text-[#aeaeae] leading-loose">Menu</h3>
+                         <ul class="pb-4">
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">main</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">SERVICES</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">FRANCHISE</a></li>
+                         </ul>
+                    </div>
+                    <div class="md:block hidden basis-1/4">
+                         <h3 class="md:text-2xl text-xl pt-4 text-[#aeaeae] leading-loose">Services</h3>
+                         <ul class="pb-4">
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">HAIRCUTS</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">MOUSTACHE AND BEARD</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">STRAIGHT RAZOR SHAVING</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">ROYAL SHAVE</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">TATTOO</a></li>
+                         </ul>
+                    </div>
+                    <div class="md:basis-1/4 ">
+                         <h3 class="md:text-2xl text-xl pt-4 text-[#aeaeae] leading-loose">Info</h3>
+                         <ul class="pb-4">
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">PRIVACY POLICY</a></li>
+                              <li><a href="" class="md:text-lg text-base md:leading-loose leading-loose hover:text-[#d6a354] x-animation-md">TERMS AND CONDITIONS</a></li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+          <div class="md:text-right font-semibold text-sm text-[#aeaeae] uppercase">© 2014–2024 Oldboy Barbershop</div>
+     </footer>
+</body>
+
+</html>
